@@ -8,3 +8,7 @@ Clinical Web Dashboard: A clean, intuitive dashboard designed specifically for h
 Secure Firebase Integration: Built with robust user authentication (Login/Signup) and secure, real-time cloud data management for digital patient records.
 
 Educational Utility: Acts as an interactive training tool for medical students to study complex clinical scan cases.
+# Download the Code
+```bash
+git clone [https://github.com/humnakhan284/CerVis-AI-WebApp.git](https://github.com/humnakhan284/CerVis-AI-WebApp.git)
+cd CerVis-AI-WebApp
