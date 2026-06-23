@@ -1,0 +1,6 @@
+/* src/index.css */
+/* Any final overrides that don't belong in globals.css */
+
+#root {
+  min-height: 100vh;
+}

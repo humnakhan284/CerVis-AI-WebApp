@@ -1,0 +1,125 @@
+/* ─── CerVis AI — Dashboard Layout Styles ───────────────────────────────────── */
+
+.app { display: flex; min-height: 100vh; animation: pgIn 0.38s ease; }
+
+/* ── Sidebar ── */
+.sb {
+  width: var(--sidebar-w);
+  background: var(--ruby);
+  min-height: 100vh; position: fixed; top: 0; left: 0;
+  display: flex; flex-direction: column; z-index: 200;
+  box-shadow: 4px 0 32px rgba(139,0,0,0.22);
+}
+
+.sb-logo {
+  padding: 24px 18px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; gap: 11px;
+}
+
+.sb-li {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+.sb-li svg { width: 20px; height: 20px; fill: white; }
+
+.sb-ln { font-size: 19px; font-weight: 800; color: #fff; letter-spacing: -0.4px; }
+.sb-ls { font-size: 10px; color: rgba(255,255,255,0.38); letter-spacing: 0.08em; text-transform: uppercase; }
+
+.sb-nav { flex: 1; padding: 16px 10px; display: flex; flex-direction: column; gap: 2px; }
+.sb-sec { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.28); padding: 13px 10px 4px; }
+
+.sb-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 8px;
+  font-size: 13.5px; font-weight: 500; color: rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.16s;
+  border: none; background: transparent; width: 100%; text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sb-item:hover  { background: rgba(255,255,255,0.1); color: #fff; }
+.sb-item.active { background: rgba(255,255,255,0.16); color: #fff; font-weight: 700; }
+.sb-item.active .sb-dot { background: #fff; }
+
+.sb-ico { font-size: 16px; width: 20px; text-align: center; }
+.sb-dot { width: 5px; height: 5px; border-radius: 50%; background: transparent; margin-left: auto; }
+
+.sb-foot { padding: 13px 10px; border-top: 1px solid rgba(255,255,255,0.1); }
+
+.sb-user {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; border-radius: 8px; cursor: pointer; transition: background 0.15s;
+}
+
+.sb-user:hover { background: rgba(255,255,255,0.08); }
+
+.sb-av {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800; color: #fff; flex-shrink: 0;
+}
+
+.sb-un { font-size: 13px; font-weight: 700; color: #fff; }
+.sb-ur { font-size: 11px; color: rgba(255,255,255,0.44); }
+
+.sb-out {
+  width: 100%; margin-top: 8px; padding: 8px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12); background: transparent;
+  color: rgba(255,255,255,0.44); font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px; cursor: pointer; transition: all 0.15s; text-align: center;
+}
+
+.sb-out:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.8); }
+
+/* ── Main Area ── */
+.main { margin-left: var(--sidebar-w); flex: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ── Topbar ── */
+.topbar {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 15px 30px;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+}
+
+.pg-title { font-size: 20px; font-weight: 800; color: var(--text); letter-spacing: -0.4px; }
+.pg-sub   { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.tb-r     { display: flex; align-items: center; gap: 10px; }
+
+.tb-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700;
+  cursor: pointer; transition: all 0.15s;
+  border: 1.5px solid var(--border); background: var(--surface); color: var(--text2);
+}
+
+.tb-btn:hover      { border-color: var(--border2); background: var(--snow); }
+.tb-btn.ruby       { background: var(--ruby); color: #fff; border-color: var(--ruby); }
+.tb-btn.ruby:hover { background: var(--ruby-hover); }
+
+.notif-btn {
+  width: 38px; height: 38px; border-radius: 9px;
+  border: 1.5px solid var(--border); background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 17px; position: relative;
+}
+
+.notif-btn:hover { background: var(--snow); }
+.notif-dot { position: absolute; top: 7px; right: 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--malignant); border: 1.5px solid white; }
+
+/* ── Content Area ── */
+.content { flex: 1; padding: 26px 30px 48px; }
+
+/* ── Section Headers ── */
+.sec-title { font-size: 16px; font-weight: 800; color: var(--text); margin-bottom: 4px; letter-spacing: -0.2px; }
+.sec-sub   { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+/* ── Empty State ── */
+.empty    { text-align: center; padding: 72px 24px; }
+.empty-ic { font-size: 44px; margin-bottom: 12px; }
+.empty-tx { font-size: 14px; color: var(--muted); }

@@ -1,0 +1,178 @@
+/* ─── CerVis AI — Auth Styles (Login + Register) ───────────────────────────── */
+
+.auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  animation: pgIn 0.42s ease both;
+}
+
+/* ── Left Brand Panel ── */
+.auth-l {
+  background: var(--ruby);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-l::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 28% 28%, rgba(255,255,255,0.07) 0%, transparent 58%);
+}
+
+.al-inner { position: relative; z-index: 1; text-align: center; width: 100%; }
+
+.al-icon {
+  width: 78px; height: 78px; border-radius: 22px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 22px;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.18);
+}
+
+.al-icon svg { width: 38px; height: 38px; fill: white; }
+
+.al-brand { font-size: 40px; font-weight: 800; color: #fff; letter-spacing: -1px; margin-bottom: 6px; }
+.al-sub   { font-size: 13px; color: rgba(255,255,255,0.48); margin-bottom: 44px; letter-spacing: 0.03em; }
+
+.al-feats { display: flex; flex-direction: column; gap: 11px; }
+
+.al-feat {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 15px; border-radius: 12px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+}
+
+.al-ficon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+
+.aft { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.93); margin-bottom: 2px; }
+.afd { font-size: 11px; color: rgba(255,255,255,0.42); line-height: 1.45; }
+
+/* ── Right Form Panel ── */
+.auth-r {
+  background: var(--snow);
+  display: flex; align-items: center; justify-content: center;
+  padding: 44px 40px; overflow-y: auto;
+}
+
+.auth-form { width: 100%; max-width: 400px; }
+
+.auth-title { font-size: 26px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; margin-bottom: 4px; }
+.auth-sub   { font-size: 14px; color: var(--muted); margin-bottom: 26px; }
+
+/* ── Role Picker ── */
+.role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+
+.role-tile {
+  border: 2px solid var(--border); border-radius: 14px;
+  padding: 18px 14px; cursor: pointer; transition: all 0.18s;
+  text-align: center; background: var(--surface);
+}
+
+.role-tile:hover { border-color: var(--ruby-hover); background: var(--ruby-faint); }
+.role-tile.sel   { border-color: var(--ruby); background: var(--ruby-faint); box-shadow: 0 0 0 3px rgba(139,0,0,0.09); }
+
+.rt-icon  { font-size: 30px; margin-bottom: 8px; }
+.rt-title { font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 3px; }
+.rt-desc  { font-size: 11px; color: var(--muted); line-height: 1.4; }
+.role-tile.sel .rt-title { color: var(--ruby); }
+
+/* ── Form Fields ── */
+.fld { margin-bottom: 14px; }
+.fld-lbl { display: block; font-size: 13px; font-weight: 700; color: var(--text2); margin-bottom: 6px; }
+
+.fld-inp {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px; color: var(--text);
+  background: var(--surface); outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.fld-inp:focus        { border-color: var(--ruby); box-shadow: 0 0 0 3px rgba(139,0,0,0.09); }
+.fld-inp.err          { border-color: var(--malignant); }
+.fld-inp::placeholder { color: var(--muted2); }
+
+.fld-sel {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--border); border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px; color: var(--text); background: var(--surface);
+  outline: none; cursor: pointer; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b09090' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  transition: border-color 0.15s;
+}
+
+.fld-sel:focus { border-color: var(--ruby); box-shadow: 0 0 0 3px rgba(139,0,0,0.09); }
+
+.fld-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.fld-err { font-size: 12px; color: var(--malignant); margin-top: 4px; }
+
+.pw-wrap { position: relative; }
+.pw-toggle {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; font-size: 16px; color: var(--muted2); padding: 4px;
+}
+
+/* ── Banners ── */
+.err-banner {
+  padding: 10px 14px; border-radius: 8px; margin-bottom: 14px;
+  background: var(--mal-bg); border: 1px solid #fecaca;
+  color: var(--malignant); font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.ok-banner {
+  padding: 10px 14px; border-radius: 8px; margin-bottom: 14px;
+  background: var(--benign-bg); border: 1px solid #a7f3d0;
+  color: var(--benign); font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  width: 100%; padding: 13px; border-radius: 10px; border: none;
+  background: var(--ruby); color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px; font-weight: 800; cursor: pointer;
+  transition: all 0.18s; margin-top: 6px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+
+.btn-primary:hover    { background: var(--ruby-hover); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(139,0,0,0.26); }
+.btn-primary:active   { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.52; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.auth-switch { text-align: center; font-size: 13px; color: var(--muted); margin-top: 18px; }
+.auth-lnk    { color: var(--ruby); font-weight: 800; cursor: pointer; }
+.auth-lnk:hover { text-decoration: underline; }
+
+.check-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.check-row input  { margin-top: 2px; accent-color: var(--ruby); width: 15px; height: 15px; cursor: pointer; }
+.check-row label  { font-size: 12px; color: var(--muted); line-height: 1.5; cursor: pointer; }
+
+/* ── Demo Box ── */
+.demo-box {
+  margin-top: 20px; padding: 12px 14px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+}
+
+.demo-box-lbl { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; }
+.demo-box-val { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); line-height: 1.9; }

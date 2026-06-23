@@ -1,0 +1,76 @@
+/* ─── CerVis AI — Global Styles ─────────────────────────────────────────────
+   Import this in main.jsx BEFORE App.css
+   ────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* ── Brand ── */
+  --ruby:        #8B0000;
+  --ruby-hover:  #a01010;
+  --ruby-faint:  #fff0f0;
+  --ruby-card:   rgba(139,0,0,0.06);
+  --malignant:   #A32D2D;
+  --mal-bg:      #FFF5F5;
+  --teal:        #1D3D3D;
+  --teal-hover:  #2a5252;
+  --benign:      #2E7D32;
+  --benign-bg:   #F1F8E9;
+
+  /* ── Backgrounds ── */
+  --snow:        #FBFBFB;
+  --surface:     #ffffff;
+
+  /* ── Borders ── */
+  --border:      #e8d5d5;
+  --border2:     #d0b8b8;
+
+  /* ── Typography ── */
+  --text:        #1a0808;
+  --text2:       #3d2020;
+  --muted:       #7a5a5a;
+  --muted2:      #b09090;
+
+  /* ── Module Accents ── */
+  --eye-bg:      #E3F2FD;
+  --eye-icon:    #1565C0;
+  --cer-bg:      #FCE4EC;
+  --cer-icon:    #880E4F;
+
+  /* ── Layout ── */
+  --sidebar-w:   248px;
+}
+
+html, body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--snow);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pgIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { transform: scale(1);    opacity: 0.8; }
+  50%       { transform: scale(1.1); opacity: 0.4; }
+}
